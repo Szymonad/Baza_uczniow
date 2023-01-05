@@ -55,3 +55,11 @@ int Uczen::Ret_Wiek() {
 
 	return Wiek;
 }
+
+void Uczen::Wypisz_Dane_Ucznia(){
+
+	cout << "imie:    \t" << Imie << endl
+		 << "nazwisko:\t" << Nazwisko << endl
+		 << "wiek:    \t" << Wiek << endl << endl;
+
+}

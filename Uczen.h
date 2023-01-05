@@ -19,6 +19,7 @@ public:
 	int Ret_Wiek();
 	string Ret_Imie();
 	string Ret_Nazwisko();
+	void Wypisz_Dane_Ucznia();
 
 
 
