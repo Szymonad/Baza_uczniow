@@ -8,7 +8,10 @@ class Zabezpieczenia
 public:
 
 	int Wpisywanie_liczby_calkowitej(string zmienna);
-
+	string Wpisywanie_znakow_bez_liczb(string zmienna);
+	string Zmiana_poczatkowej_litery_na_duza(string wyraz);
+	bool Jest_liczba(string str);
+    
 
 };
 

@@ -16,10 +16,12 @@ Uczen::~Uczen() {
 
 void Uczen::zapis() {
 	cout << "Podaj imie" << endl;
-	cin >> Imie;
+	Imie = Zabezpiecznie.Wpisywanie_znakow_bez_liczb("Imie");
+	//cin >> Imie;
 
 	cout << "Podaj nazwisko" << endl;
-	cin >> Nazwisko;
+	Nazwisko = Zabezpiecznie.Wpisywanie_znakow_bez_liczb("Nazwisko");
+	//cin >> Nazwisko;
 
 	cout << "Podaj wiek" << endl;
 	Wiek = Zabezpiecznie.Wpisywanie_liczby_calkowitej("Wiek");

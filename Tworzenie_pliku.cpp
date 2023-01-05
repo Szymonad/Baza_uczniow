@@ -14,7 +14,7 @@ void Tworzenie_pliku::zmien_nazwe_pliku() {
 }
 
 void Tworzenie_pliku::wpisywanie_uczniow(Uczen Wpisywany) {
-	ofstream plik("Baza.xls", ios::app);
+	ofstream plik("C:\\Users\\szymo\\OneDrive\\Pulpit\\korki online\\Baza\\Baza.xls", ios::app);
 	plik << "imie:\t" << Wpisywany.Ret_Imie() << endl
 		<< "nazwisko:\t" << Wpisywany.Ret_Nazwisko() << endl
 		<< "wiek:\t" << Wpisywany.Ret_Wiek() << endl<<endl;
