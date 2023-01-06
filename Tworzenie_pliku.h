@@ -14,6 +14,7 @@ public:
 	void zmien_nazwe_pliku();
 	void wpisywanie_uczniow(Uczen ananas);
 	void wyczysc_plik();
+	void Wypisz_Uczniow();
 
 };
 

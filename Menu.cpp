@@ -121,6 +121,7 @@ void Menu::wypisz_uczniow() {
 void Menu::wypisz_uczniow_z_bazy() {
 
 	cout << "wypisano uczniow z bazy" << endl;
+	Baza_Uczniow.Wypisz_Uczniow();
 	system("pause");
 }
 
