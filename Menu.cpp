@@ -98,6 +98,7 @@ do {
 }
 
 void Menu::wpisz_uczniow() {
+
 	for (int i = 0; i < Ilosc_uczni; i++) {
 		Baza_Uczniow.wpisywanie_uczniow(Uczniowie[i]);
 	}
@@ -106,15 +107,15 @@ void Menu::wpisz_uczniow() {
 }
 
 void Menu::wypisz_uczniow() {
-	for (int i = 0; i < Ilosc_uczni; i++) {
-		cout << i+1 << "," << endl;
-		Uczniowie[i].Wypisz_Dane_Ucznia();
-	}
-
 	if (Uczniowie.empty())
 		cout << "brak uczniow w pamieci" << endl;
-	else
-	cout << "wypisano uczniow" << endl;
+	else {
+		for (int i = 0; i < Ilosc_uczni; i++) {
+			cout << i + 1 << "." << endl;
+			Uczniowie[i].Wypisz_Dane_Ucznia();
+		}
+		cout << "wypisano uczniow" << endl;
+	}
 	system("pause");
 }
 
@@ -133,7 +134,7 @@ void Menu::Wprowadz_Uczniow_Z_Pliku_Do_Pamieci() {
 }
 
 void Menu::Usun_Uczniow_Z_Pamieci() {
-
+	Uczniowie.clear();
 	cout << "usunieto uczniow z pamieci" << endl;
 	system("pause");
 
