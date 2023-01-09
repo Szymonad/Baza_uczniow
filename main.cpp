@@ -2,7 +2,7 @@
 
 int main() {
 	Menu test;
-	test.wykonaj();
+	test.Wykonaj();
 
 
 
