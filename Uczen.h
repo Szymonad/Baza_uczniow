@@ -13,12 +13,12 @@ public:
 
 	Uczen();
 	~Uczen();
-	void zapis();
-	void wypisz();
-	void przypisanie(int wiek, string imie, string nazwisko);
-	int Ret_Wiek();
-	string Ret_Imie();
-	string Ret_Nazwisko();
+	void Zapis();
+	void Wypisz();
+	void Przypisanie(int wiek, string imie, string nazwisko);
+	int Ret_Wiek() { return Wiek; }
+	string Ret_Imie() { return Imie; }
+	string Ret_Nazwisko() { return Nazwisko; }
 	void Wypisz_Dane_Ucznia();
 
 

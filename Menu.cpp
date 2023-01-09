@@ -2,12 +2,10 @@
 #include <windows.h>
 
 Menu::Menu() {
-
-	Ilosc_uczni = 0;
-
+	Ilosc_Uczni = 0;
 }
 
-void Menu::wykonaj(){
+void Menu::Wykonaj(){
 	int wybor;
 	do {
 		system("cls");
@@ -24,20 +22,21 @@ void Menu::wykonaj(){
 		system("cls");
 		switch (wybor)
 		{
+
 		case 1:
-			wprowdz_uczniow();
+			Wprowdz_Uczniow();
 			break;
 
 		case 2:
-			wypisz_uczniow();
+			Wypisz_Uczniow();
 			break;
 
 		case 3:
-			wpisz_uczniow();
+			Wpisz_Uczniow();
 			break;
 
 		case 4:
-			wypisz_uczniow_z_bazy();
+			Wypisz_Uczniow_Z_Bazy();
 			break;
 
 		case 5:
@@ -50,42 +49,20 @@ void Menu::wykonaj(){
 			Wyczysc_Plik();
 			break;
 
-
-
-		
-		
-		
-		
-		
-
-
-
-
-
-
-
 		}
 	
 	} while (wybor != 8);
-
-
-
-
-	//int i;
-	//i = 0;
-	//wprowdz_uczniow();
-	//
-	//wpisz_uczniow();
-	
 }
 
-void Menu::wprowdz_uczniow() {
+void Menu::Wprowdz_Uczniow() {
+
 	bool koniec = false;
 	Uczen Buf;
-do {
-	Ilosc_uczni++;
 
-	Buf.zapis();
+do {
+	Ilosc_Uczni++;
+
+	Buf.Zapis();
 	Uczniowie.push_back(Buf);
 
 	cout << "Czy to byl ostatni uczen?\n"
@@ -93,33 +70,38 @@ do {
 		<< "1.Tak\n";
 	cin >> koniec;
 
-
 } while (!koniec);
 }
 
-void Menu::wpisz_uczniow() {
-
-	for (int i = 0; i < Ilosc_uczni; i++) {
-		Baza_Uczniow.wpisywanie_uczniow(Uczniowie[i]);
-	}
-	cout << "uczniowie zostali wpisani" << endl; 
-	system("pause");
-}
-
-void Menu::wypisz_uczniow() {
+void Menu::Wypisz_Uczniow() {
 	if (Uczniowie.empty())
 		cout << "brak uczniow w pamieci" << endl;
+
 	else {
-		for (int i = 0; i < Ilosc_uczni; i++) {
+
+		for (int i = 0; i < Ilosc_Uczni; i++) {
 			cout << i + 1 << "." << endl;
 			Uczniowie[i].Wypisz_Dane_Ucznia();
 		}
+
 		cout << "wypisano uczniow" << endl;
 	}
+
 	system("pause");
 }
 
-void Menu::wypisz_uczniow_z_bazy() {
+void Menu::Wpisz_Uczniow() {
+
+	for (int i = 0; i < Ilosc_Uczni; i++) {
+		Baza_Uczniow.Wpisywanie_Uczniow(Uczniowie[i]);
+	}
+
+	cout << "uczniowie zostali wpisani" << endl; 
+
+	system("pause");
+}
+
+void Menu::Wypisz_Uczniow_Z_Bazy() {
 
 	cout << "wypisano uczniow z bazy" << endl;
 	Baza_Uczniow.Wypisz_Uczniow();
@@ -134,14 +116,23 @@ void Menu::Wprowadz_Uczniow_Z_Pliku_Do_Pamieci() {
 }
 
 void Menu::Usun_Uczniow_Z_Pamieci() {
+
 	Uczniowie.clear();
 	cout << "usunieto uczniow z pamieci" << endl;
 	system("pause");
-
 }
 
 void Menu::Wyczysc_Plik() {
-	//Baza_Uczniow.wyczysc_plik();
-	cout << "baza uczniow wyczyszczona";
+	string warunek;
+	cout << "czy jestes pewny? Napisz ,Tak' jesli chcesz wyczyscic\n";
+	cin >> warunek;
 
+	if (warunek == "Tak") {
+		//Baza_Uczniow.wyczysc_plik();
+		cout << "baza uczniow wyczyszczona\n";
+	}
+
+	else cout << "baza uczniow nie zostala wyczyszczona\n";
+
+	system("pause");
 }
