@@ -117,17 +117,20 @@ void Menu::Wprowadz_Uczniow_Z_Pliku_Do_Pamieci() {
 
 void Menu::Usun_Uczniow_Z_Pamieci() {
 
-	Uczniowie.clear();
-	cout << "usunieto uczniow z pamieci" << endl;
+
+	if (Warunek("uczniow z pamieci")) {
+		Uczniowie.clear();
+		cout << "usunieto uczniow z pamieci" << endl;
+	}
+
+	else cout << "uczniowie nie zostali usunieci z pamieci\n";
+
 	system("pause");
 }
 
 void Menu::Wyczysc_Plik() {
-	string warunek;
-	cout << "czy jestes pewny? Napisz ,Tak' jesli chcesz wyczyscic\n";
-	cin >> warunek;
-
-	if (warunek == "Tak") {
+	
+	if (Warunek("baze uczniow")) {
 		//Baza_Uczniow.wyczysc_plik();
 		cout << "baza uczniow wyczyszczona\n";
 	}
@@ -136,3 +139,27 @@ void Menu::Wyczysc_Plik() {
 
 	system("pause");
 }
+
+
+
+
+bool Menu::Warunek(string do_czego) {
+	string potwierdzenie;
+	cout << "czy jestes pewny? Napisz ,Tak' jesli chcesz wyczyscic " << do_czego << endl;
+	cin >> potwierdzenie;
+	bool warunek = false;
+
+	if (potwierdzenie == "Tak") { //nalezy pamietac by napisaæ ,Tak' z du¿ej litery
+		cout << "wpisano ,Tak'\n";
+		warunek = true;
+	}
+
+	else {
+		cout << "nie wpisano ,Tak'\n";
+		warunek = false;
+	}
+	//system("pause");
+
+	return warunek;
+}
+

@@ -47,7 +47,7 @@ void Tworzenie_Pliku::Wypisz_Uczniow() {
 		while (getline(plik_czytanie, linia))
 		{
 			//ta czêœæ kodu powsta³a poniewa¿ wyst¹pi³ problem z wypisywaniem danych uczniów w kosoli
-		    // poiewa¿ s³owo nazwisko jest zbyt d³ugie w porównaniu do s³owa wiek czy imie
+		    // poniewa¿ s³owo nazwisko jest zbyt d³ugie w porównaniu do s³owa wiek czy imie
 	
 			int znaleziono1 = linia.find("imie");
 			int znaleziono2 = linia.find("wiek");

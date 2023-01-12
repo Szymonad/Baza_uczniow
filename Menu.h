@@ -22,5 +22,9 @@ public:
 	void Usun_Uczniow_Z_Pamieci();
 	void Wyczysc_Plik();
 
+
+	bool Warunek(string do_czego); //do_czego wypisuje siê na konsoli
+
+
 };
 

@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 int Zabezpieczenia::Wpisywanie_liczby_calkowitej(string zmienna) {
 
     int liczba;
@@ -28,7 +27,7 @@ string Zabezpieczenia::Wpisywanie_znakow_bez_liczb(string zmienna) {
     string wyraz;
     do {
         cin >> wyraz;
-        wyraz=Zmiana_poczatkowej_litery_na_duza(wyraz);
+        wyraz = Zmiana_poczatkowej_litery_na_duza(wyraz);
         if (Jest_liczba(wyraz))
             cout <<"bledny parametr: "<<zmienna<<endl << "Sprubuj ponownie, uzywaj tylko liter:\n";
        // else
