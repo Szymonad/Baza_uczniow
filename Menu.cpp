@@ -117,7 +117,6 @@ void Menu::Wprowadz_Uczniow_Z_Pliku_Do_Pamieci() {
 
 void Menu::Usun_Uczniow_Z_Pamieci() {
 
-
 	if (Warunek("uczniow z pamieci")) {
 		Uczniowie.clear();
 		cout << "usunieto uczniow z pamieci" << endl;
