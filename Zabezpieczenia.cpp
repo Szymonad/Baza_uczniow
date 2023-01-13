@@ -15,7 +15,7 @@ int Zabezpieczenia::Wpisywanie_liczby_calkowitej(string zmienna) {
         cin >> liczba;
         if (!cin.good()) {
             cout << "bledny parametr:" << zmienna << endl
-                << "sprubuj ponownie, urzywaj tylko cyfr:\n";
+                << "sprobuj ponownie, uzywaj tylko cyfr:\n";
         }
     }while (!cin.good());// warunek niepoprawnosci strumienia
 
@@ -29,7 +29,7 @@ string Zabezpieczenia::Wpisywanie_znakow_bez_liczb(string zmienna) {
         cin >> wyraz;
         wyraz = Zmiana_poczatkowej_litery_na_duza(wyraz);
         if (Jest_liczba(wyraz))
-            cout <<"bledny parametr: "<<zmienna<<endl << "Sprubuj ponownie, uzywaj tylko liter:\n";
+            cout <<"bledny parametr: "<<zmienna<<endl << "Sprobuj ponownie, uzywaj tylko liter:\n";
        // else
             //cout << "wpisano poprawnie\n";
 

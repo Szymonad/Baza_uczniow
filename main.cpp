@@ -1,13 +1,16 @@
 #include "Menu.h"
 
-int main() {
-	Menu test;
-	test.Wykonaj();
-
-
-
-}
-
+//int main() {
+//	Menu test;
+//	test.Wykonaj();
+//
+//
+//
+//
+//
+//
+//}
+//
 
 
 
@@ -199,3 +202,22 @@ int main() {
 //
 //	return 0;
 //}
+
+
+
+#include<iostream>
+
+
+using namespace std;
+
+int main() {
+
+
+	int tab=2;
+	int* a = &tab;
+
+	cout << *a;
+
+
+	return 0;
+}
