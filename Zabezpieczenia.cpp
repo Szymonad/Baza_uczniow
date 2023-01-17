@@ -22,6 +22,35 @@ int Zabezpieczenia::Wpisywanie_liczby_calkowitej(string zmienna) {
     return liczba;
 }
 
+int Zabezpieczenia::Wpisywanie_liczby_calkowitej_Z_Przedzialem(int dolna_granica, int gorna_granica,string zmienna) {
+
+    int liczba;
+    int buf;
+
+    if (dolna_granica < gorna_granica) {}
+
+    else {
+        buf = gorna_granica;
+        gorna_granica = dolna_granica;
+        dolna_granica = buf;
+    }
+
+
+
+    do
+    {
+        cin.clear(); //czysci falge bledu strumienia
+        cin.ignore(numeric_limits < streamsize >::max(), '\n'); //usuwa wszystkie znaki z buforu strumienia
+        cin >> liczba;
+        if (!cin.good()) {
+            cout << "bledny parametr:" << zmienna << endl
+                << "sprobuj ponownie, uzywaj tylko cyfr:\n";
+        }
+    } while (!cin.good() || liczba<dolna_granica || liczba>gorna_granica);// warunek niepoprawnosci strumienia
+
+    return liczba;
+}
+
 string Zabezpieczenia::Wpisywanie_znakow_bez_liczb(string zmienna) {
 
     string wyraz;

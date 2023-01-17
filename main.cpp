@@ -1,16 +1,31 @@
 #include "Menu.h"
 
-//int main() {
-//	Menu test;
-//	test.Wykonaj();
-//
-//
-//
-//
-//
-//
-//}
-//
+#include "zabezpieczenia.h"
+
+int main() {
+
+	//Menu test;
+	//test.Wykonaj();
+
+
+
+
+	//test zabezpieczenia
+	Zabezpieczenia Zabezpieczenie;
+	int a;
+	while (1) {
+	cout << "wpisz wartosc: " << endl;
+	a = Zabezpieczenie.Wpisywanie_liczby_calkowitej("wartosc");
+
+	cout << "wartosc: " << a << endl;
+}
+
+
+
+
+
+}
+
 
 
 
@@ -204,20 +219,20 @@
 //}
 
 
-
-#include<iostream>
-
-
-using namespace std;
-
-int main() {
-
-
-	int tab=2;
-	int* a = &tab;
-
-	cout << *a;
-
-
-	return 0;
-}
+//
+//#include<iostream>
+//
+//
+//using namespace std;
+//
+//int main() {
+//
+//
+//	int tab=2;
+//	int* a = &tab;
+//
+//	cout << *a;
+//
+//
+//	return 0;
+//}

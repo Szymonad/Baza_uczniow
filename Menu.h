@@ -21,6 +21,9 @@ public:
 	void Wprowadz_Uczniow_Z_Pliku_Do_Pamieci();
 	void Usun_Uczniow_Z_Pamieci();
 	void Wyczysc_Plik();
+	void Usun_Ucznia();
+
+	/*void Default();*/
 
 
 	bool Warunek(string do_czego); //do_czego wypisuje siê na konsoli
