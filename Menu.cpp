@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include <windows.h>
 #include "Zabezpieczenia.h"
+
 #include <vector>
 
 //Zabezpieczenia Zabezpiecznie;
@@ -24,7 +25,8 @@ void Menu::Wykonaj(){
 			<< "7. wyczysc baze uczniow" << endl
 			<< "8. usun pojedynczego ucznia z pamieci" << endl
 			<< "9. jesli chcesz zakonczyc program" << endl;
-		wybor = Zabezpiecznie.Wpisywanie_liczby_calkowitej_Z_Przedzialem(0, 9, "wybor");
+		//wybor = Zabezpiecznie.Wpisywanie_liczby_calkowitej_Z_Przedzialem(0, 9, "wybor");
+		wybor = 0;
 		//cin >> wybor;
 		system("cls");
 		switch (wybor)
